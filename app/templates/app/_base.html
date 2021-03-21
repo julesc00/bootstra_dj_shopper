@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block css %}
+        <link href="{% static 'app/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    {% endblock %}
+
+    <title>{% block title %}Shopper{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'app/js/bootstrap.bundle.min.js' %}" crossorigin="anonymous"></script>
+    <script src="{% static 'app/js/main.js' %}"></script>
+{% endblock %}
+</body>
+</html>
